@@ -1,0 +1,410 @@
+<title>
+    Cafeteria </title>
+
+<canvas id="final111"></canvas>
+
+<script>
+    const canvas = document.getElementById("final111");
+    canvas.width = 1270;
+    canvas.height = 710;
+
+
+
+
+
+    const context = canvas.getContext("2d");
+
+
+    const backImg = new Image();
+    backImg.src = "https://png.pngtree.com/thumb_back/fh260/back_pic/05/12/49/325998f0b44dbb2.jpg";
+    const waiterImg = new Image();
+    waiterImg.src = "http://exchangedownloads.smarttech.com/public/content/85/85854eb2-5b52-4ab0-8e08-8de790b4a242/previews/medium/0001.png";
+    const barImg = new Image();
+    barImg.src = "https://hanslodge.com/data_images/362779.gif";
+
+    const pers1 = new Image();
+    pers1.src = "https://images.vexels.com/media/users/3/127303/isolated/preview/d2d88005bdd8195bb5930634e712c8de-businessman-profession-cartoon-by-vexels.png";
+    const pers2 = new Image();
+    pers2.src = "https://images.vexels.com/media/users/3/145744/isolated/preview/23266213696f77c4e3f1e5b6a7d7f12e-man-hands-in-pockets-illustration-by-vexels.png";
+    const pers3 = new Image();
+    pers3.src = "https://i.graphicmama.com/uploads/2016/2/Jenna-Elegance-56cc5f77c8445.png";
+    const pers4 = new Image();
+    pers4.src = "https://image.samsung.com/cn/smartphones/galaxy-s9/ar/images/galaxy-s9_ar_my_emoji_002.png";
+    const pers5 = new Image();
+    pers5.src = "https://upload.wikimedia.org/wikipedia/hy/1/10/Daria_Morgendorffer.png";
+    const pers6 = new Image();
+    pers6.src = "https://i.pinimg.com/originals/bd/6f/f6/bd6ff618848e43b2b79eed0b77acc4bb.png";
+    const pers7 = new Image();
+    pers7.src = "https://images.vexels.com/media/users/3/130955/isolated/preview/08c00870e43aa206e86e5f3b3495e902-hipster-girl-cartoon-character-by-vexels.png";
+    const pers8 = new Image();
+    pers8.src = "https://i.pinimg.com/originals/d6/70/2b/d6702b0615669b7e6845af41d67d6ae8.png";
+
+
+    const leftPosition = 310;
+    let topPosition = 75;
+
+    const menu = {
+        objImg1: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg2: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg3: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg4: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg5: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg6: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg7: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg8: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg9: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg10: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg11: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg12: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg13: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg14: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg15: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg16: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg17: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg18: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg19: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        },
+        objImg20: {
+            img: new Image(),
+            data: {
+
+                width: 50,
+                height: 50
+            }
+        }
+    }
+    menu.objImg1.img.src = "./img/img1.jpg";
+
+    menu.objImg2.img.src = "./img/img1.jpg";
+
+    menu.objImg3.img.src = "./img/img1.jpg";
+
+    menu.objImg4.img.src = "./img/img1.jpg";
+
+    menu.objImg5.img.src = "./img/img1.jpg";
+
+    menu.objImg6.img.src = "./img/img1.jpg";
+
+    menu.objImg7.img.src = "./img/img1.jpg";
+
+    menu.objImg8.img.src = "./img/img1.jpg";
+
+    menu.objImg9.img.src = "./img/img1.jpg";
+
+    menu.objImg10.img.src = "./img/img1.jpg";
+
+    menu.objImg11.img.src = "./img/img1.jpg";
+
+    menu.objImg12.img.src = "./img/img1.jpg";
+
+    menu.objImg13.img.src = "./img/img1.jpg";
+
+    menu.objImg14.img.src = "./img/img1.jpg";
+
+    menu.objImg15.img.src = "./img/img1.jpg";
+
+    menu.objImg16.img.src = "./img/img1.jpg";
+
+    menu.objImg17.img.src = "./img/img1.jpg";
+
+    menu.objImg18.img.src = "./img/img1.jpg";
+
+    menu.objImg19.img.src = "./img/img1.jpg";
+
+    menu.objImg20.img.src = "./img/img1.jpg";
+
+    let countLeft = 0;
+    let countTop = 0;
+    for (let key in menu) {
+        console.log(menu)
+        if (countLeft < 11 && countTop < 1) {
+            menu[key].data.left = leftPosition + (countLeft * 60)
+            menu[key].data.top = topPosition
+                ++countLeft
+            if (countLeft === 10) {
+                countTop = 1
+                topPosition = 135
+                countLeft = 0
+            }
+        } else {
+            menu[key].data.left = leftPosition + (countLeft * 60)
+            menu[key].data.top = topPosition
+                ++countLeft
+
+
+        }
+
+    }
+
+
+
+
+
+
+    const rand = function(num) {
+        return Math.floor(Math.random() * num) + 1;
+    };
+
+    const waiter = {
+        x: 150,
+        y: 350,
+        width: 200,
+        height: 300,
+        img: waiterImg,
+        draw: function() {
+            context.drawImage(this.img, this.x, this.y, this.width, this.height);
+
+
+        }
+
+    }
+
+    const people = function(count) {
+            const base = [];
+            let pers = [pers1, pers2, pers3, pers4, pers5, pers6, pers7, pers8];
+            for (let i = 0; i < count; i++) {
+
+
+
+                let img = pers[rand(pers.length) - 1]
+                pers = pers.filter(per => per.src !== img.src);
+
+                base[base.length] = {
+                    x: canvas.width + i * 5 * rand(canvas.width),
+                    y: 350,
+                    xDir: -1,
+                    yDir: 1,
+                    delta: 3,
+                    width: 200,
+                    height: 300,
+                    img: img,
+                    draw: function() {
+                        context.drawImage(this.img, this.x, this.y, this.width, this.height);
+                    },
+                    update1: function(stopCord) {
+                        this.x += this.xDir * this.delta;
+                        if (this.x <= stopCord) {
+                            this.delta = 0;
+                        }
+                    }
+                }
+            }
+            return base;
+        }
+        //     $("p").mouseover(function(event){
+        //         if((event.x%310+50)>=0){
+        //             console.log("jjj");
+        //         }
+
+
+    // });
+
+
+
+
+
+    const peoPle = people(4).sort(function(a, b) {
+        return a.x > b.x ? 1 : a.x < b.x ? -1 : 0;
+    });
+
+
+
+    const draw = function() {
+        for (let i = 0; i < peoPle.length; i++) {
+            //peoPle[i].draw();
+            setTimeout(peoPle[i].draw(), i * 1000);
+
+        }
+
+    };
+
+
+    const update = function() {
+        for (let i = 0; i < peoPle.length; i++) {
+
+            let stopCord = 350;
+
+            if (peoPle[i - 1] && !peoPle[i - 1].delta) {
+                if ((peoPle[i - 1] && (peoPle[i - 1].x + 200))) {
+                    stopCord = (peoPle[i - 1] && (peoPle[i - 1].x + 200))
+                        // debugger;
+                }
+
+
+            }
+
+
+            peoPle[i].update1(stopCord);
+
+        }
+
+
+    }
+
+    const addMenu = function() {
+        for (var key in menu) {
+
+            context.drawImage(menu[key].img, menu[key].data.left, menu[key].data.top, menu[key].data.height, menu[key].data.width);
+        }
+    }
+
+    const loop = function() {
+        context.drawImage(backImg, 0, 0, canvas.width, canvas.height);
+        addMenu()
+        waiter.draw();
+        draw();
+        update();
+        context.drawImage(barImg, 150, 470, 250, 230);
+        requestAnimationFrame(loop);
+    }
+
+
+    loop();
+
+
+    canvas.addEventListener('click', function(event) {
+        var x = event.pageX,
+            y = event.pageY;
+        for (var key in menu) {
+            console.log(menu[key].data)
+            console.log(menu[key].data.top, menu[key].data.top + menu[key].data.height, '------', y)
+            console.log(menu[key].data.left, menu[key].data.left + menu[key].data.width, '------', x)
+            if (y > menu[key].data.top && y < menu[key].data.top + menu[key].data.height &&
+                x > menu[key].data.left && x < menu[key].data.left + menu[key].data.width) {
+                alert(key);
+            }
+        }
+    }, false);
+</script>
