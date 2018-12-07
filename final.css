@@ -35,17 +35,7 @@ body{
     animation-name: modalopen;
     animation-duration: 5s;
 }
-.closeBtn{
-    color: lightgray;
-    float: right;
-    font-size: 30px;
-}
-.closeBtn:hover,
-.closeBtn:focus{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 @keyframes modalopen{
     from{opacity: 0}
     to {opacity: 5}

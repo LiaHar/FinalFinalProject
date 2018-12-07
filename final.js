@@ -12,23 +12,23 @@ const context = canvas.getContext("2d");
 const backImg = new Image();
 backImg.src = "https://png.pngtree.com/thumb_back/fh260/back_pic/05/12/49/325998f0b44dbb2.jpg";
 const waiterImg = new Image();
-waiterImg.src = "http://exchangedownloads.smarttech.com/public/content/85/85854eb2-5b52-4ab0-8e08-8de790b4a242/previews/medium/0001.png";
+waiterImg.src = "cook.png";
 const barImg = new Image();
-barImg.src = "https://hanslodge.com/data_images/362779.gif";
+barImg.src = "table.png";
 const pers1 = new Image();
-pers1.src = "https://images.vexels.com/media/users/3/127303/isolated/preview/d2d88005bdd8195bb5930634e712c8de-businessman-profession-cartoon-by-vexels.png";
+pers1.src = "per1.png";
 const pers2 = new Image();
-pers2.src = "https://images.vexels.com/media/users/3/145744/isolated/preview/23266213696f77c4e3f1e5b6a7d7f12e-man-hands-in-pockets-illustration-by-vexels.png";
+pers2.src = "per2.png";
 const pers3 = new Image();
-pers3.src = "https://i.graphicmama.com/uploads/2016/2/Jenna-Elegance-56cc5f77c8445.png";
+pers3.src = "per3.png";
 const pers4 = new Image();
-pers4.src = "https://image.samsung.com/cn/smartphones/galaxy-s9/ar/images/galaxy-s9_ar_my_emoji_002.png";
+pers4.src = "per4.png";
 const pers5 = new Image();
-pers5.src = "https://upload.wikimedia.org/wikipedia/hy/1/10/Daria_Morgendorffer.png";
+pers5.src = "per5.png";
 const pers6 = new Image();
-pers6.src = "https://i.pinimg.com/originals/bd/6f/f6/bd6ff618848e43b2b79eed0b77acc4bb.png";
+pers6.src = "per6.png";
 const pers7 = new Image();
-pers7.src = "https://images.vexels.com/media/users/3/130955/isolated/preview/08c00870e43aa206e86e5f3b3495e902-hipster-girl-cartoon-character-by-vexels.png";
+pers7.src = "per7.png";
 const pers8 = new Image();
 pers8.src = "https://i.pinimg.com/originals/d6/70/2b/d6702b0615669b7e6845af41d67d6ae8.png";
 const menuImg = new Image();
@@ -163,8 +163,8 @@ const rand = function(num) {
 };
 
 const waiter = {
-    x: 150,
-    y: 350,
+    x: 100,
+    y: 300,
     width: 200,
     height: 300,
     img: waiterImg,
@@ -194,6 +194,7 @@ const getPeoplePicturesIndexes = function(val) {
         bool = !bool
     }
 }
+console.log(arrayPicture)
 ////////////////////////////////////////////////////////////////////////
 const people = function(count) {
     const base = [];
@@ -280,7 +281,7 @@ const sky = {
 const peoPle = people(8).sort(function(a, b) {
     return a.x > b.x ? 1 : a.x < b.x ? -1 : 0;
 });
-
+/////////////////////////////////
 
 const draw = function() {
     for (let i = 0; i < peoPle.length; i++) {
