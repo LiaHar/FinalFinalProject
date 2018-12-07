@@ -346,7 +346,6 @@ const drawFood = function(bool){
 
 
 const checkPoint = function(){
-    
     let tmpPeople = peoPle[inBarPeopleIndex]
     for(let z=0; z <= tmpPeople.wishDish.length; z++){
         for(let key in selectedProduct){
@@ -359,36 +358,32 @@ const checkPoint = function(){
            
            
         }
+        
+      
     }
-    console.log('userPoint',userPoint)  
+    console.log('userPoint',userPoint) 
+    
 
-      if(userPoint > 10){
-        // alert('YOUR POINT IS :'+ userPoint);
+
+      if(userPoint > 9){
+    
         let modal = document.getElementById("simpleModal");
         function openModal(){
-        modal.style.display= "block"; //this
+        modal.style.display= "block"; 
         }
         openModal();
         inBarPeopleIndex = 0;
         gameStart = true;
     }  
-    if(userPoint < -50){
-        // alert('YOUR POINT IS :'+ userPoint);
-
-        document.getElementById("p1").innerHTML = "try again!";
-        let modal1 = document.getElementById("simpleModal");
-        function openModal(){
-        modal1.style.display= "block"; //this
-        }
-        openModal();
-        inBarPeopleIndex = 0;
-        gameStart = true;
-    }  
-  
+   
+    
+       
+       
 }
 
 const loop = function() {
     getPeoplePicturesIndexes(bool)
+    
 
     feed();
 
@@ -400,7 +395,8 @@ const loop = function() {
     draw();
     update();
     requestAnimationFrame(loop);
-    
+    context.font = "30px Arial";
+    context.fillText("Your score is:" +userPoint,0,25);
 }
 
 canvas.addEventListener('click', function(event) {
@@ -413,6 +409,7 @@ canvas.addEventListener('click', function(event) {
             if( Object.keys(selectedProduct).length > 2){
                 val = true;
                 checkPoint();
+
             }
         }
     }
