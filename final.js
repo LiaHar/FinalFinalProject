@@ -2,8 +2,7 @@ function clickonbg(){
     document.getElementById("poster").style.visibility = "hidden";
     start();
 }
-////
-
+ 
 function start(){
 const canvas = document.getElementById("final111");
 canvas.width = 1270;
@@ -163,8 +162,8 @@ const rand = function(num) {
 };
 
 const waiter = {
-    x: 100,
-    y: 300,
+    x: 120,
+    y: 260,
     width: 200,
     height: 300,
     img: waiterImg,
@@ -204,7 +203,7 @@ const people = function(count) {
         pers = pers.filter(per => per.src !== img.src);
         base[base.length] = {
             x: canvas.width + i * 2 * rand(canvas.width),
-            y: 350,
+            y: 300,
             xDir: -1,
             yDir: 1,
             delta: 6,
@@ -294,7 +293,7 @@ const draw = function() {
 const update = function() {
     
     for (let i = 0; i < peoPle.length; i++) {
-        stopCord = 350;
+        stopCord = 370;
         if(i > 0){
             if(peoPle[i - 1].x > 0){
                 stopCord = peoPle[i - 1].x + 200
@@ -315,7 +314,7 @@ const addMenu = function(){
 const feed = function() {
     context.drawImage(backImg, 0, 0, canvas.width, canvas.height);
     waiter.draw();
-    context.drawImage(barImg, 150, 470, 250, 230);
+    context.drawImage(barImg, 150, 450, 250, 230);
 }
 
 
@@ -323,8 +322,8 @@ const feed = function() {
 const drawFood = function(bool){
     let i = 0
     for (var key in selectedProduct){
-       let left = 300 + ( i * 40)
-        context.drawImage(selectedProduct[key].img,left,460,30,30);
+       let left = 250 + ( i * 40)
+        context.drawImage(selectedProduct[key].img,left,420,30,30);
         i++
     }
 
